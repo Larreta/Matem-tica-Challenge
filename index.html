@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="contenedor">
+
+        <header class="encabezado">
+            <h1>🧠 Matemática <span>Challenge</span></h1>
+            <p>¡Aprende, juega y demuestra tu talento!</p>
+        </header>
+
+        <!-- INICIO -->
+        <section id="pantalla-inicio" class="tarjeta">
+            <div class="icono">🎮</div>
+            <h2>¡Prepárate para el desafío!</h2>
+
+            <p>Resuelve problemas matemáticos, gana puntos y demuestra cuánto sabes.</p>
+
+            <div class="instrucciones">
+                <span>📝 5 preguntas</span>
+                <span>⏱️ 30 segundos</span>
+                <span>🏆 Puntos por acierto</span>
+            </div>
+
+            <label for="nombre-jugador">Escribe tu nombre:</label>
+            <input
+                id="nombre-jugador"
+                type="text"
+                placeholder="Tu nombre"
+                maxlength="30"
+            >
+
+            <button id="boton-comenzar" class="boton principal">
+                ¡Comenzar juego! 🚀
+            </button>
+        </section>
+
+        <!-- JUEGO -->
+        <section id="pantalla-juego" class="tarjeta oculto">
+
+            <div class="barra-superior">
+                <span id="contador-pregunta">Pregunta 1 de 5</span>
+                <span id="puntuacion">🏆 0 puntos</span>
+            </div>
+
+            <div class="progreso">
+                <div id="barra-progreso"></div>
+            </div>
+
+            <div id="temporizador" class="temporizador">
+                ⏱️ Tiempo restante: <strong id="tiempo">30</strong> segundos
+            </div>
+
+            <span id="categoria" class="categoria"></span>
+
+            <h2 id="pregunta"></h2>
+
+            <div id="alternativas" class="alternativas"></div>
+
+            <div id="retroalimentacion" aria-live="polite"></div>
+
+            <button id="boton-siguiente" class="boton principal oculto">
+                Siguiente pregunta ➜
+            </button>
+        </section>
+
+        <!-- RESULTADOS -->
+        <section id="pantalla-final" class="tarjeta oculto">
+            <div class="icono">🏆</div>
+            <h2 id="mensaje-final">¡Juego terminado!</h2>
+            <p id="resumen-final"></p>
+
+            <div class="resultados">
+                <div>
+                    <strong id="resultado-puntos">0</strong>
+                    <span>Puntos</span>
+                </div>
+
+                <div>
+                    <strong id="resultado-correctas">0/5</strong>
+                    <span>Correctas</span>
+                </div>
+            </div>
+
+            <p id="mensaje-motivacion"></p>
+
+            <button id="boton-reiniciar" class="boton principal">
+                🔄 Volver a jugar
+            </button>
+        </section>
+
+        <footer>
+            Matemática Challenge © 2026 | Aprende jugando 💡
+        </footer>
+
+    </main>
+</body>
+</html>
